@@ -1,0 +1,16 @@
+.post-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+}
+.post-header .post-header-left {
+  display: flex;
+  align-items: center;
+}
+.post-header .profile-username {
+  margin-left: 10px;
+}
