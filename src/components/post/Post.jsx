@@ -3,6 +3,9 @@ import "./post.css";
 import Avatar from "@mui/material/Avatar";
 import AvatarImg from "../../img/avatar/avatar.png";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import PostImg from "../../img/post/3.jpg";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+
 const Post = () => {
   return (
     <div className="post-wrapper">
@@ -25,8 +28,30 @@ const Post = () => {
           </button>
         </div>
       </div>
-      <div className="post-img"></div>
-      <div className="post-bottom"></div>
+      <div className="post-img">
+        <img src={PostImg} alt="Post Image" />
+      </div>
+      <div className="post-bottom">
+        <div className="post-like">
+          <button>
+            <FavoriteIcon className="post-like-icon active" />
+          </button>
+          <span className="post-like-count">0 Like</span>
+        </div>
+
+        <div className="post-content">
+          <a href="/" className="profile-username">
+            yasiincoban
+          </a>{" "}
+          <span className="post-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ea
+            enim doloribus saepe aut fugit recusandae architecto dignissimos
+            dicta cum?
+          </span>
+        </div>
+
+        <div className="post-time">1 dakika önce</div>
+      </div>
     </div>
   );
 };
