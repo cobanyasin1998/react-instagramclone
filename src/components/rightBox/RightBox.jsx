@@ -1,6 +1,8 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import AvatarImg from "../../img/avatar/avatar.png";
+import { Button } from "@mui/material";
+import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
 
 import "./rightbox.css";
 const RightBox = () => {
@@ -14,9 +16,10 @@ const RightBox = () => {
             sx={{ width: 28, height: 28 }}
           />
         </a>
-        <a href="/" className="account-titles">
+        <div className="account-titles">
           <a href="/">yasiincoban</a>
-        </a>
+          <span>Yasin Çoban</span>
+        </div>
       </div>
       <span className="friends-title">My Friends</span>
       <ul className="friends-list">
@@ -29,8 +32,20 @@ const RightBox = () => {
                 sx={{ width: 28, height: 28 }}
               />
             </a>
+            <div className="friend-username">
+              <a href="/">yasiincoban</a>
+              <span>Yasin Çoban</span>
+            </div>
           </div>
-          <div className="friend-item-right"></div>
+          <div className="friend-item-right">
+            <Button
+              variant="contained"
+              endIcon={<ArrowCircleRightOutlinedIcon />}
+              size="small"
+            >
+              Profile Git
+            </Button>
+          </div>
         </li>
       </ul>
     </div>

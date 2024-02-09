@@ -1,0 +1,32 @@
+.profile-page {
+  margin: 88px 0;
+}
+.profile-page .profile-head {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-page .profile-head .head-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.profile-page .profile-head .head-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.profile-page .head-right-top {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.profile-page .profile-page-buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.profile-page .profile-head .profile-page-username {
+  font-size: 28px;
+}
