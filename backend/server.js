@@ -6,7 +6,7 @@ const morgan = require("morgan");
 
 const authRoute = require("./routes/auth.js");
 const usersRoute = require("./routes/users.js");
-
+const postsRoute = require("./routes/posts.js");
 const port = 5000;
 
 dotenv.config();
@@ -23,6 +23,7 @@ app.use(express.json());
 app.use(morgan("common"));
 app.use("/auth", authRoute);
 app.use("/users", usersRoute);
+app.use("/posts", postsRoute);
 
 app.listen(port, () => {
   connectDB();
