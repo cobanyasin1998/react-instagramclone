@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./share.css";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -23,7 +22,7 @@ const Share = ({ open, handleClose }) => {
           <div className="modal-body">
             <div className="modal-body-top">
               <Avatar
-                alt="Avatar Image"
+                alt="Avatar"
                 src={AvatarImg}
                 sx={{ width: 46, height: 46 }}
               />
@@ -55,7 +54,7 @@ const Share = ({ open, handleClose }) => {
               </button>
             </div>
             <div className="share-img-wrapper">
-              <img src={PostImg} alt="Post Image" />
+              <img src={PostImg} alt="Post" />
               <CancelOutlinedIcon className="cancel-icon" color="error" />
             </div>
           </div>

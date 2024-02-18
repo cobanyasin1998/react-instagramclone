@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./logo.css";
 import VectorLogo from "../../img/logo/Vector.png";
+import { AuthContext } from "../../context/AuthContext";
 
 const Logo = () => {
   return (
