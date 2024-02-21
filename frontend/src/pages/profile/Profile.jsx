@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./profile.css";
 import Avatar from "@mui/material/Avatar";
 import AvatarImg from "../../img/avatar/avatar.png";
@@ -15,6 +15,7 @@ import {
 import Post from "../../components/post/Post";
 
 const Profile = () => {
+  const [user, setUser] = useState({});
   return (
     <div className="container">
       <div className="profile-page">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import Share from "./components/share/Share";
@@ -10,8 +10,9 @@ import Profile from "./pages/profile/Profile";
 import { Login } from "./pages/login/Login";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "./context/AuthContext";
 
-function App({ user }) {
+function App() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -19,6 +20,7 @@ function App({ user }) {
   const handleClose = () => {
     setOpen(false);
   };
+  const { user } = useContext(AuthContext);
   return (
     <div className="App">
       <Share open={open} handleClose={handleClose} />
@@ -26,9 +28,12 @@ function App({ user }) {
       <ToastContainer />
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile/:username" element={<Profile />} />
-          <Route path="/messenger" element={<Messenger />} />
+          <Route path="/" element={user ? <Home /> : <Login />} />
+          <Route
+            path="/profile/:username"
+            element={user ? <Profile /> : <Login />}
+          />
+          <Route path="/messenger" element={user ? <Messenger /> : <Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>

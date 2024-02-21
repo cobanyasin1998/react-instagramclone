@@ -53,7 +53,7 @@ const Register = () => {
       const res = await axios.post("http://localhost:5000/auth/register", user);
       if (res.status === 200) {
         toast.success("Registration Success");
-        navigate("login");
+        navigate("/login");
       }
     } catch (error) {
       toast.warning("Registration Error" + error.message);
@@ -131,7 +131,7 @@ const Register = () => {
         <div className="form-input">
           <TextField
             required
-            type="password"
+            type="text"
             id="outlined-basic"
             label="Bio"
             variant="outlined"
